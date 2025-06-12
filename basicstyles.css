@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+.footer-divider {
+    width: 1200px;               /* Short horizontal line */
+    height: 0.5px;               /* Line thickness */
+    background-color: #808080;    /* Light gray like Medium */
+    border: none;              /* Remove default border */
+    margin: 10px auto 20px;    /* Center it and add spacing */
+}
+
+
+#contact {
+    padding: 40px 20px;
+    background: none;       /* No background */
+    border: none;           /* No border */
+    box-shadow: none;       /* No shadow */
+    text-align: center;
+}
+
+#contact .container {
+    padding: 0;             /* Prevent any internal boxy spacing */
+    margin: 0 auto;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.email-link a,
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    margin: 10px 15px;
+}
+
+.email-link img,
+.social-links img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
+
+.section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.email-link,
+.phone-link,
+.social-links {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0073e6;
+}
+
+a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.social-links a {
+    margin-right: 15px;
+}
+</style>
+.name-header {
+    font-family: 'Merriweather', serif;
+}
+
+.footer-column h4 {
+    font-family: 'Merriweather', serif;
+}
+
+.footer a {
+    position: relative;          /* for ::after positioning */
+    text-decoration: none;       /* no underline by default */
+    color: inherit;
+    transition: color 0.3s ease; /* smooth color change if any */
+}
+
+/* Create the animated underline using ::after */
+.footer a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;                /* slightly below text */
+    left: 0;
+    height: 2px;                 /* thickness of underline */
+    width: 0;                    /* start hidden */
+    background-color: currentColor; /* underline matches text color */
+    transition: width 0.3s ease;
+}
+
+/* Optional: underline on hover instantly */
+.footer a:hover::after {
+    width: 100%;
+}
+
+/* Animate underline on focus or active (click) */
+.footer a:focus::after,
+.footer a:active::after {
+    width: 100%;
+}
+
+<style>
+body {
+    background-color: #1E2939;
+}
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+.footer a img {
+    filter: none;
+}
+.footer a.github-logo img {
+    filter: brightness(0) invert(1);
+}
+.footer h4,
+.footer p,
+.footer ul li a,
+.footer-bottom {
+    color: white;
+}
+.footer-bottom {
+    color: white;
+    font-size: 0.85rem; /* smaller size */
+    text-align: center;
+    margin-top: 20px;
+}
+
+</style>
+body {
+    background-color: #1E2939;
+}
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.word-box {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+}
+
+.word-box:hover {
+    background-color: rgba(0, 0, 0, 0.07); /* subtle highlight */
+}
+
+.word-box.clicked {
+    background-color: rgba(0, 0, 0, 0.25); /* darker on click */
+    color: white;
+    transform: scale(1.02); /* optional slight zoom */
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --primary: #ffffff;
+    --text: #0f172a;
+    --subtext: #475569;
+    --accent: #2563eb;
+    --footer-bg: #1e2939;
+    --footer-text: #cbd5e1;
+    --footer-link: #94a3b8;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--primary);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.hero {
+    background: #f8fafc;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: var(--subtext);
+}
+
+.hero-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background: #3b82f6;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.course-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 260px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin-right: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 60px 20px;
+    font-size: 0.95rem;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column h4 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: var(--footer-link);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    color: #94a3b8;
+    border-top: 1px solid #1e293b;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .course-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.newsletter-box {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.newsletter p {
+    color: #475569;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 12px;
+    width: 300px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #1e40af;
+}
