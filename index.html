@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gouse Jaheer Syed | Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
+
+</head>
+
+  <style>
+    .word-box {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 0px solid transparent;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .word-box:hover {
+      background-color: rgba(0, 0, 0, 0.07);
+      border-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .word-box.clicked {
+      background-color: rgba(0, 0, 0, 0.25);
+      color: white;
+      transform: scale(1.05);
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+<style>
+  .navbar {
+    padding: 0.5rem 1rem; /* Reduce vertical padding */
+    height: auto; /* Or set a specific height if needed */
+    background-color: #fff; /* Optional background */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional */
+  }
+
+  .animated-logo {
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    animation: fadeInUp 1s ease-in-out both;
+    margin: 0; /* Removes default h1 margin */
+  }
+
+  .nav-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+    </style>
+
+<!-- Google Fonts (Cinzel) -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-content">
+    <h1 class="logo animated-logo">Portfolio</h1>
+    <ul class="nav-links">
+      <li><a href="#home" class="word-box">Home</a></li>
+      <li><a href="#about" class="word-box">About</a></li>
+      <li><a href="#skills" class="word-box">Skills</a></li>
+      <li><a href="#projects" class="word-box">Projects</a></li>
+      <li><a href="#internship" class="word-box">Internship</a></li>
+      <li><a href="#contact" class="word-box">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Styles -->
+<style>
+  .navbar {
+    padding: 0.5rem 1rem; /* Makes navbar short */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .animated-logo {
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    animation: fadeInUp 1s ease-in-out both;
+    margin: 0; /* Removes default h1 margin */
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    font-family: 'Cinzel', serif;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    color: #0077cc; /* Optional hover color */
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<header class="hero" id="home" style="background-color: #fff;">
+  <div class="container hero-content" style="display:flex; align-items:center; gap:40px; flex-wrap:wrap;">
+    <div class="hero-text" style="flex:1; min-width:280px;">
+      <h1>Hi, Myself<br>Gouse Jaheer</h1>
+      <p>I'm a Frontend Developer</p>
+      <p>
+        Computer Science student with strong skills in Web-Development, Problem Solving, and a passion for learning new technologies. Experienced in building real-world projects and exploring areas like Web Development and Machine Learning.
+      </p>
+
+      <!-- Social icons -->
+      <div class="social-icons">
+        <a href="mailto:sgousejaheer@gmail.com" aria-label="Email" title="Email" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+        </a>
+        <a href="https://www.linkedin.com/in/gouse-jaheer-syed-788211350/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/gousejaheer-syed" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+        </a>
+        <a href="https://t.me/jaheercoder16" aria-label="Telegram" title="Telegram" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" />
+        </a>
+      </div>
+
+      <!-- Download CV Button without arrow -->
+      <a href="path/to/your-cv.pdf" download class="download-cv" id="downloadCvBtn" aria-label="Download CV">
+        <span class="download-text">Download</span> CV
+      </a>
+
+
+    </div>
+
+    <img src="https://avatars.githubusercontent.com/u/139248091?v=4" class="hero-image" alt="Gouse Jaheer Syed" style="width: 280px; border-radius: 12px;" />
+  </div>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+    .hero {
+      background-color: #fff; /* Added background white */
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+
+    .social-icons a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img,
+    .social-icons a:focus img {
+      transform: scale(1.1);
+    }
+
+    /* Download CV button styles */
+    .download-cv {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 30px;
+      padding: 12px 28px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: #ccc; /* lighter for CV */
+      background: #007bff;
+      border-radius: 30px; /* more rounded edges */
+      box-shadow: 0 0 15px #007bff, 0 0 30px #007bff, 0 0 40px #007bff;
+      cursor: pointer;
+      user-select: none;
+      transition: box-shadow 0.3s ease;
+      max-width: fit-content;
+
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Only "Download" white */
+    .download-text {
+      color: #fff;
+    }
+
+    /* Stop glowing on hover */
+    .download-cv:hover {
+      box-shadow: none;
+      color: #fff; /* keep text visible on hover */
+    }
+  </style>
+</header>
+<section id="about" class="section" style="background-color: #F9FAFB; border: none; box-shadow: none; padding: 40px 20px; max-width: 2000px; margin: 0 auto;">
+
+  <h2 style="font-size: 3.5rem; margin-bottom: 25px;">About Me</h2>
+  <p style="font-size: 1.75rem; line-height: 1.6;">
+    I’m Gouse jaheer, a developer and community builder. I'm a Computer Science student at BVC Engineering College with a strong academic foundation, including a diploma from KIET and an SSC GPA of 9.8. I'm passionate about exploring new technologies and have solid skills in C++, Java, Python, and JavaScript. I've developed impactful projects such as a home food delivery platform for hostelers away from home and a live fire detection deep learning model.
+  </p>
+
+  <a href="#home" class="read-more-btn" aria-label="Read More about Home section">Read More</a>
+
+</section>
+
+<<section id="skills" class="section" style="background-color: #F9FAFB; padding: 60px 20px;">
+  <h2 style="text-align: center; font-size: 2.4rem; margin-bottom: 40px;">Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-box">
+      <h3>Programming Languages</h3>
+      <p>Java, C++, SQL, Python</p>
+    </div>
+    <div class="skill-box">
+      <h3>Frontend</h3>
+      <p>HTML, CSS, JavaScript, React</p>
+    </div>
+    <div class="skill-box">
+      <h3>Tools</h3>
+      <p>VS Code, Git, GitHub</p>
+    </div>
+    <div class="skill-box">
+      <h3>Libraries</h3>
+      <p>NumPy, Pandas, Scikit-Learn</p>
+    </div>
+  </div>
+
+  <style>
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Increased width from 22% to 28% */
+    .skill-box {
+      flex: 1 1 28%;
+      min-width: 260px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 123, 255, 0.15);
+    }
+
+    .skill-box h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .skill-box p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    @media (max-width: 922px) {
+      /* Adjusted flex basis for medium screens */
+      .skill-box {
+        flex: 1 1 45%;
+        min-width: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      /* Full width on small screens */
+      .skill-box {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</section>
+
+
+<section id="projects" class="section" style="background-color: #F9FAFB; padding: 60px 20px;">
+  <h2 style="text-align: center; font-size: 2.4rem; margin-bottom: 40px;">Projects</h2>
+  <div class="container">
+
+  <div class="project-row">
+    <div class="project-card">
+      <h3>Crypto Tracker</h3>
+      <p>Built with MERN stack to track real-time crypto prices and charts.</p>
+    </div>
+    <div class="project-card">
+      <h3>Weather App</h3>
+      <p>Fetches real-time weather using OpenWeather API. Built with HTML, CSS, JS.</p>
+    </div>
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Responsive personal website showcasing my skills, projects, and resume.</p>
+    </div>
+  </div>
+
+  <style>
+    .project-row {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .project-card {
+      flex: 0 0 350px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-width: 350px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.15);
+    }
+
+    .project-card h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .project-row::-webkit-scrollbar {
+      display: none;
+    }
+
+    .project-row {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+    </div>
+</section>
+
+
+<section id="internship" class="section">
+  <div class="container">
+    <h2>Internship</h2>
+    <p>I interned as a Web Developer and built responsive UIs, REST APIs, and deployed applications on the cloud.</p>
+  </div>
+</section>
+<section id="contact" style="background-color: #F1F5F9; padding: 20px 0;">
+  <div class="container">
+    <h2>Contact Me</h2>
+
+    <div class="email-link">
+      <a href="mailto:sgousejaheer@gmail.com">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> sgousejaheer@gmail.com
+      </a>
+    </div>
+    <div class="phone-link">
+      <a href="tel:+919989845378">
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone"> +91 9989845378
+      </a>
+    </div>
+
+    <div class="social-links">
+      <a href="https://github.com/gousejaheer-syed" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/gouse-jaheer-syed-788211350/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"> LinkedIn
+      </a>
+      <a href="https://twitter.com/gousejaheer" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"> Twitter
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-column">
+      <h1 class="name-header">Gouse Jaheer Syed</h1>
+      <p>
+        <a href="mailto:sgousejaheer@gmail.com" aria-label="Send email to sgousejaheer@gmail.com" title="Email">
+          <img
+                  src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+                  alt="Email icon"
+                  class="social-icon"
+          />
+          sgousejaheer@gmail.com
+        </a>
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Socials</h4>
+      <ul>
+        <li>
+          <a href="https://x.com/gousejaheer" target="_blank" aria-label="Twitter Profile">
+            <img
+                    src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                    alt="Twitter icon"
+                    class="social-icon"
+            />
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/gouse-jaheer-syed-788211350/" target="_blank" aria-label="LinkedIn Profile">
+            <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                    alt="LinkedIn icon"
+                    class="social-icon"
+            />
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Other</h4>
+      <ul>
+        <li>
+          <a href="https://github.com/gousejaheer-syed" target="_blank" aria-label="GitHub Profile">
+            <img
+                    src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+                    alt="GitHub icon"
+                    class="social-icon"
+            />
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://t.me/jaheercoder16" target="_blank" aria-label="Telegram Profile">
+            <img
+                    src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+                    alt="Telegram icon"
+                    class="social-icon"
+            />
+            Telegram
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">© 2025 Gouse Jaheer Syed. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
