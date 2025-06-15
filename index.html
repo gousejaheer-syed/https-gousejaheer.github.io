@@ -4,83 +4,221 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gouse Jaheer Syed | Developer Portfolio</title>
+
+  <!-- Fonts -->
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
-
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    .word-box {
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: 0px solid transparent;
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      padding: 0.5rem 1rem;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      height: auto;
+    }
+
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .animated-logo {
+      font-size: 2.2rem;
+      font-weight: 600;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      animation: fadeInUp 1s ease-in-out both;
+      margin: 0;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
       text-decoration: none;
-      color: inherit;
+      color: #1a1a1a;
+      font-weight: 500;
+      font-family: 'Cinzel', serif;
+      transition: color 0.3s ease;
     }
 
-    .word-box:hover {
-      background-color: rgba(0, 0, 0, 0.07);
-      border-color: rgba(0, 0, 0, 0.15);
+    .nav-links li a:hover {
+      color: #0077cc;
     }
 
-    .word-box.clicked {
-      background-color: rgba(0, 0, 0, 0.25);
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Body and hero styling */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+    }
+
+    .hero {
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin: 0 0 10px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .hero-text p {
+      font-family: 'Arial', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    /* Social icons */
+    .social-icons {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img,
+    .social-icons a:focus img {
+      transform: scale(1.1);
+    }
+
+    /* Hero image */
+
+    /* Download CV & Read More button styles */
+    .download-cv,
+    .read-more-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      background-color: #007bff;
       color: white;
-      transform: scale(1.05);
-      border-color: rgba(0, 0, 0, 0.3);
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+
+      animation: pulse 3s ease-in-out infinite;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
+
+    .download-cv:hover,
+    .download-cv:focus,
+    .read-more-btn:hover,
+    .read-more-btn:focus {
+      transform: translateY(-4px);
+      animation-play-state: paused;
+      animation: bounce 0.6s ease forwards;
+      background-color: #007bff; /* No black on hover */
+    }
+
+    /* Pulse animation */
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: none;
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.2);
+      }
+    }
+
+    /* Bounce animation */
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      30%  { transform: translateY(-8px); }
+      50%  { transform: translateY(0); }
+      70%  { transform: translateY(-4px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* About Section */
+    #about {
+      background-color: #F9FAFB;
+      padding: 40px 20px;
+      max-width: 2000px;
+      margin: 0 auto;
+      border: none;
+      box-shadow: none;
+    }
+
+    #about h2 {
+      font-size: 3.5rem;
+      margin-bottom: 25px;
+    }
+
+    #about p {
+      font-size: 1.75rem;
+      line-height: 1.6;
+    }
+
   </style>
+
 </head>
 
 <body>
-
-<style>
-  .navbar {
-    padding: 0.5rem 1rem; /* Reduce vertical padding */
-    height: auto; /* Or set a specific height if needed */
-    background-color: #fff; /* Optional background */
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional */
-  }
-
-  .animated-logo {
-    font-size: 2.2rem;
-    font-weight: 600;
-    font-family: 'Cinzel', serif;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #1a1a1a;
-    animation: fadeInUp 1s ease-in-out both;
-    margin: 0; /* Removes default h1 margin */
-  }
-
-  .nav-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-    </style>
-
-<!-- Google Fonts (Cinzel) -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 
 <!-- Navbar -->
 <nav class="navbar">
@@ -97,171 +235,59 @@
   </div>
 </nav>
 
-<!-- Styles -->
-<style>
-  .navbar {
-    padding: 0.5rem 1rem; /* Makes navbar short */
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
 
-  .nav-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .animated-logo {
-    font-size: 2.2rem;
-    font-weight: 600;
-    font-family: 'Cinzel', serif;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #1a1a1a;
-    animation: fadeInUp 1s ease-in-out both;
-    margin: 0; /* Removes default h1 margin */
-  }
-
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-links li a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-weight: 500;
-    font-family: 'Cinzel', serif;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links li a:hover {
-    color: #0077cc; /* Optional hover color */
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-
-<header class="hero" id="home" style="background-color: #fff;">
-  <div class="container hero-content" style="display:flex; align-items:center; gap:40px; flex-wrap:wrap;">
-    <div class="hero-text" style="flex:1; min-width:280px;">
-      <h1>Hi, Myself<br>Gouse Jaheer</h1>
-      <p>I'm a Frontend Developer</p>
-      <p>
-        Computer Science student with strong skills in Web-Development, Problem Solving, and a passion for learning new technologies. Experienced in building real-world projects and exploring areas like Web Development and Machine Learning.
+<!-- Hero Section -->
+<header class="hero" id="home">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>Hi, Myself<br>Gouse Jaheer Syed</h1>
+      <p class="title">I'm a Frontend Developer</p>
+      <p class="description">
+        Computer Science student with strong skills in Web Development, Problem-Solving, and a passion for learning new technologies. Experienced in building real-world projects and exploring areas like Web Development and Machine Learning.
       </p>
+
 
       <!-- Social icons -->
       <div class="social-icons">
-        <a href="mailto:sgousejaheer@gmail.com" aria-label="Email" title="Email" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:sgousejaheer@gmail.com" target="_blank" aria-label="Email">
           <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
         </a>
-        <a href="https://www.linkedin.com/in/gouse-jaheer-syed-788211350/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/gouse-jaheer-syed-788211350/" target="_blank" aria-label="LinkedIn">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
         </a>
-        <a href="https://github.com/gousejaheer-syed" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/gousejaheer-syed" target="_blank" aria-label="GitHub">
           <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
         </a>
-        <a href="https://t.me/jaheercoder16" aria-label="Telegram" title="Telegram" target="_blank" rel="noopener noreferrer">
+        <a href="https://t.me/jaheercoder16" target="_blank" aria-label="Telegram">
           <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" />
         </a>
       </div>
 
-      <!-- Download CV Button without arrow -->
-      <a href="path/to/your-cv.pdf" download class="download-cv" id="downloadCvBtn" aria-label="Download CV">
+      <!-- Download CV Button -->
+      <a href="your-cv.pdf" download class="download-cv" aria-label="Download CV">
         <span class="download-text">Download</span> CV
       </a>
-
-
     </div>
+    <img src="Screenshot 2025-06-14 at 01.43.10.png" height="400" alt="gouse jaheer"/>
 
-    <img src="https://avatars.githubusercontent.com/u/139248091?v=4" class="hero-image" alt="Gouse Jaheer Syed" style="width: 280px; border-radius: 12px;" />
   </div>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-
-    .hero {
-      background-color: #fff; /* Added background white */
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-      justify-content: flex-start;
-      margin-top: 20px;
-    }
-
-    .social-icons a img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.3s ease;
-    }
-
-    .social-icons a:hover img,
-    .social-icons a:focus img {
-      transform: scale(1.1);
-    }
-
-    /* Download CV button styles */
-    .download-cv {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 30px;
-      padding: 12px 28px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      text-decoration: none;
-      color: #ccc; /* lighter for CV */
-      background: #007bff;
-      border-radius: 30px; /* more rounded edges */
-      box-shadow: 0 0 15px #007bff, 0 0 30px #007bff, 0 0 40px #007bff;
-      cursor: pointer;
-      user-select: none;
-      transition: box-shadow 0.3s ease;
-      max-width: fit-content;
-
-      font-family: 'Poppins', sans-serif;
-    }
-
-    /* Only "Download" white */
-    .download-text {
-      color: #fff;
-    }
-
-    /* Stop glowing on hover */
-    .download-cv:hover {
-      box-shadow: none;
-      color: #fff; /* keep text visible on hover */
-    }
-  </style>
 </header>
-<section id="about" class="section" style="background-color: #F9FAFB; border: none; box-shadow: none; padding: 40px 20px; max-width: 2000px; margin: 0 auto;">
 
-  <h2 style="font-size: 3.5rem; margin-bottom: 25px;">About Me</h2>
-  <p style="font-size: 1.75rem; line-height: 1.6;">
+<!-- About Section -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
     I’m Gouse jaheer, a developer and community builder. I'm a Computer Science student at BVC Engineering College with a strong academic foundation, including a diploma from KIET and an SSC GPA of 9.8. I'm passionate about exploring new technologies and have solid skills in C++, Java, Python, and JavaScript. I've developed impactful projects such as a home food delivery platform for hostelers away from home and a live fire detection deep learning model.
   </p>
 
-  <a href="#home" class="read-more-btn" aria-label="Read More about Home section">Read More</a>
-
+  <!-- Read More Button -->
+  <a href="#home" class="read-more-btn" aria-label="Read More">
+    <span class="download-text">Read more</span>
+  </a>
 </section>
+
+</body>
+</html>
 
 <<section id="skills" class="section" style="background-color: #F9FAFB; padding: 60px 20px;">
   <h2 style="text-align: center; font-size: 2.4rem; margin-bottom: 40px;">Skills</h2>
@@ -368,8 +394,7 @@
       gap: 20px;
       overflow-x: auto;
       padding-bottom: 10px;
-    }
-
+  }
     .project-card {
       flex: 0 0 350px;
       background: #ffffff;
@@ -417,28 +442,17 @@
 </section>
 <section id="contact" style="background-color: #F1F5F9; padding: 20px 0;">
   <div class="container">
-    <h2>Contact Me</h2>
+    <h2 class="section-title">Contact Me</h2>
 
-    <div class="email-link">
+    <div class="contact-info">
       <a href="mailto:sgousejaheer@gmail.com">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> sgousejaheer@gmail.com
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width:24px; height:24px;" />
+        sgousejaheer@gmail.com
       </a>
-    </div>
-    <div class="phone-link">
-      <a href="tel:+919989845378">
-        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone"> +91 9989845378
-      </a>
-    </div>
 
-    <div class="social-links">
-      <a href="https://github.com/gousejaheer-syed" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"> GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/gouse-jaheer-syed-788211350/" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"> LinkedIn
-      </a>
-      <a href="https://twitter.com/gousejaheer" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"> Twitter
+      <a href="tel:+919989845378">
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone" style="width:24px; height:24px;" />
+        +91 9989845378
       </a>
     </div>
   </div>
@@ -515,8 +529,6 @@
 
   <hr class="footer-divider" />
 
-  <div class="footer-bottom">© 2025 Gouse Jaheer Syed. All rights reserved.</div>
+  <h1 class="footer-bottom">© 2025 Gouse Jaheer Syed. All rights reserved.</h1>
 </footer>
 
-</body>
-</html>
